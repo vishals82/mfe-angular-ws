@@ -17,6 +17,15 @@ const routes: Routes = [
     path: 'mfe1',
     loadChildren: () => loadRemoteModule({
       type: 'module',
+      remoteEntry: 'remoteEntry.js',
+      exposedModule: './Mfe1Module'
+    })
+    .then(m => m.MfeModule)
+  },
+  {
+    path: 'mfe1',
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
       remoteEntry: URL,
       exposedModule: './Mfe1Module'
     })
@@ -33,6 +42,15 @@ const routes: Routes = [
   },
   {
     path: 'mfe3',
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
+      remoteEntry: 'remoteEntry.js',
+      exposedModule: './Mfe3Module'
+    })
+    .then(m => m.Mfe3Module)
+  },
+  {
+    path: 'mfe33',
     loadChildren: () => loadRemoteModule({
       type: 'module',
       remoteEntry: URL3,
