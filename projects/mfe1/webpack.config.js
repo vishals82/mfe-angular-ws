@@ -11,7 +11,7 @@ sharedMappings.register(
 module.exports = {
   output: {
     uniqueName: "mfe1",
-    publicPath: "auto"
+    publicPath: "/mfe-angular-ws/mfe1/"
   },
   optimization: {
     runtimeChunk: false
