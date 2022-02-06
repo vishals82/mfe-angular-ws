@@ -15,12 +15,7 @@ const routes: Routes = [
   // },
   {
     path: 'mfe1',
-    loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: 'remoteEntry.js',
-      exposedModule: './Mfe1Module'
-    })
-    .then(m => m.MfeModule)
+    loadChildren: () => import('mfe1/Mfe1Module').then(m => m.MfeModule)
   },
   {
     path: 'mfe1',
