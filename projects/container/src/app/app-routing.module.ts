@@ -17,42 +17,43 @@ const routes: Routes = [
     path: 'mfe1',
     loadChildren: () => import('mfe1/Mfe1Module').then(m => m.MfeModule)
   },
-  {
-    path: 'mfe1',
-    loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: URL,
-      exposedModule: './Mfe1Module'
-    })
-    .then(m => m.MfeModule)
-  },
-  {
-    path: 'mfe2',
-    loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: URL2,
-      exposedModule: './Mfe2Module'
-    })
-    .then(m => m.Mfe2Module)
-  },
+  // {
+  //   path: 'mfe11',
+  //   loadChildren: () => loadRemoteModule({
+  //     type: 'module',
+  //     remoteEntry: URL,
+  //     exposedModule: './Mfe1Module'
+  //   })
+  //   .then(m => m.MfeModule)
+  // },
+  // {
+  //   path: 'mfe2',
+  //   loadChildren: () => loadRemoteModule({
+  //     type: 'module',
+  //     remoteEntry: URL2,
+  //     exposedModule: './Mfe2Module'
+  //   })
+  //   .then(m => m.Mfe2Module)
+  // },
   {
     path: 'mfe3',
-    loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: 'remoteEntry.js',
-      exposedModule: './Mfe3Module'
-    })
-    .then(m => m.Mfe3Module)
+    loadChildren: () => import('mfe3/Mfe3Module').then(m => m.Mfe3Module)
+    // loadChildren: () => loadRemoteModule({
+    //   type: 'module',
+    //   remoteEntry: 'remoteEntry.js',
+    //   exposedModule: './Mfe3Module'
+    // })
+    // .then(m => m.Mfe3Module)
   },
-  {
-    path: 'mfe33',
-    loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: URL3,
-      exposedModule: './Mfe3Module'
-    })
-    .then(m => m.Mfe3Module)
-  }
+  // {
+  //   path: 'mfe33',
+  //   loadChildren: () => loadRemoteModule({
+  //     type: 'module',
+  //     remoteEntry: URL3,
+  //     exposedModule: './Mfe3Module'
+  //   })
+  //   .then(m => m.Mfe3Module)
+  // }
 ];
 
 @NgModule({
