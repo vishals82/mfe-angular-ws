@@ -37,8 +37,10 @@ module.exports = {
         
         // For hosts (please adjust)
         remotes: {
-            "mfe1": "http://localhost:3000/remoteEntry.js",
-            "mfe2": "http://localhost:3001/remoteEntry.js",
+            "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+            "mfe2": "mfe2@http://localhost:3001/remoteEntry.js",
+            "mfe3": "mfe3@http://localhost:3002/remoteEntry.js",
+
         },
 
         shared: share({

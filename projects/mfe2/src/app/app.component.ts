@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<h1> MFE 2 App comp </h1>',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {

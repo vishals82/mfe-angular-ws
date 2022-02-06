@@ -1,9 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 import { MfeComponent } from './mfe.component';
 
 @NgModule({
@@ -11,9 +8,12 @@ import { MfeComponent } from './mfe.component';
     MfeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([{
+      path: 'mfe1',
+      component: MfeComponent
+    }])
   ],
-  providers: [],
-  bootstrap: []
+  exports: [ ]
 })
 export class MfeModule { }
