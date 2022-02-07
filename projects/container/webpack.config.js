@@ -40,7 +40,7 @@ module.exports = {
             "mfe1": "mfe1@/mfe-angular-ws/mfe1/remoteEntry.js",
             // "mfe11": "mfe1@http://localhost:3000/remoteEntry.js",
             // "mfe2": "mfe2@http://localhost:3001/remoteEntry.js",
-            "mfe3": "mfe3@/mfe3/remoteEntry.js",
+            "mfe3": "mfe3@/mfe-angular-ws/mfe3/remoteEntry.js",
             // "mfe33": "mfe3@http://localhost:3002/remoteEntry.js",
         },
 

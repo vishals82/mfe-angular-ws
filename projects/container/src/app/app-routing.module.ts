@@ -13,19 +13,19 @@ const routes: Routes = [
   //   component: AppComponent,
   //   pathMatch: 'full'
   // },
+  // {
+  //   path: 'mfe1',
+  //   loadChildren: () => import('mfe1/Mfe1Module').then(m => m.MfeModule)
+  // },
   {
     path: 'mfe1',
-    loadChildren: () => import('mfe1/Mfe1Module').then(m => m.MfeModule)
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
+      remoteEntry: 'https://vishals82.github.io/mfe-angular-ws/mfe1/remoteEntry.js',
+      exposedModule: './Mfe1Module'
+    })
+    .then(m => m.MfeModule)
   },
-  // {
-  //   path: 'mfe11',
-  //   loadChildren: () => loadRemoteModule({
-  //     type: 'module',
-  //     remoteEntry: URL,
-  //     exposedModule: './Mfe1Module'
-  //   })
-  //   .then(m => m.MfeModule)
-  // },
   // {
   //   path: 'mfe2',
   //   loadChildren: () => loadRemoteModule({
@@ -37,13 +37,13 @@ const routes: Routes = [
   // },
   {
     path: 'mfe3',
-    loadChildren: () => import('mfe3/Mfe3Module').then(m => m.Mfe3Module)
-    // loadChildren: () => loadRemoteModule({
-    //   type: 'module',
-    //   remoteEntry: 'remoteEntry.js',
-    //   exposedModule: './Mfe3Module'
-    // })
-    // .then(m => m.Mfe3Module)
+    // loadChildren: () => import('mfe3/Mfe3Module').then(m => m.Mfe3Module)
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
+      remoteEntry: 'https://vishals82.github.io/mfe-angular-ws/mfe3/remoteEntry.js',
+      exposedModule: './Mfe3Module'
+    })
+    .then(m => m.Mfe3Module)
   },
   // {
   //   path: 'mfe33',
